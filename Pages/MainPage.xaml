@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Rentals.Pages.MainPage">
+    <Grid RowDefinitions="*, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *"
+          ColumnDefinitions="*, *, *, *, *, *, *, *, *, *, *"
+          >
+
+        <!-- Equipment -->
+        <Label Grid.Column="0"  Grid.ColumnSpan="11" Grid.Row="1" FontSize="Medium" FontAttributes="Bold" Text="Equipment"/>
+        <Picker x:Name="equipmentPicker" Grid.Column="0" Grid.ColumnSpan="11" Grid.Row="2"/>
+        <Entry x:Name="equipmentDescription" Grid.Column="0"  Grid.ColumnSpan="11" Grid.Row="3" Placeholder="Description"/>
+        <Entry x:Name="equipmentId" Grid.Column="0"  Grid.ColumnSpan="1" Grid.Row="4" Placeholder="ID"/>
+        <Entry x:Name="equipmentName" Grid.Column="1"  Grid.ColumnSpan="3" Grid.Row="4" Placeholder="Name"/>
+        <Picker x:Name="equipmentCategoryPicker" Grid.Column="4"  Grid.ColumnSpan="3" Grid.Row="4"/>
+        <Entry x:Name="equipmentCost" Grid.Column="7"  Grid.ColumnSpan="2" Grid.Row="4" Placeholder="Cost"/>
+        <Button Grid.Column="9" Grid.ColumnSpan="1" Grid.Row="4" Text="Add" Clicked="onAddEquipmentButtonClicked"/>
+        <Button Grid.Column="10" Grid.ColumnSpan="1" Grid.Row="4" Text="Delete" Clicked="onDeleteEquipmentButtonClicked"/>
+        
+        <!-- Customer -->
+        <Label Grid.Column="0"  Grid.ColumnSpan="11" Grid.Row="6" FontSize="Medium" FontAttributes="Bold" Text="Customers"/>
+        <Picker x:Name="customerPicker" Grid.Column="0" Grid.ColumnSpan="11" Grid.Row="7"/>
+        <Entry x:Name="customerNotes" Grid.Column="0" Grid.ColumnSpan="11" Grid.Row="8" Placeholder="Notes"/>
+        <Entry x:Name="customerId" Grid.Column="0"  Grid.ColumnSpan="1" Grid.Row="9" Placeholder="ID"/>
+        <Entry x:Name="customerFirstName" Grid.Column="1"  Grid.ColumnSpan="2" Grid.Row="9" Placeholder="First Name"/>
+        <Entry x:Name="customerLastName" Grid.Column="3"  Grid.ColumnSpan="2" Grid.Row="9" Placeholder="Last Name"/>
+        <Entry x:Name="customerPhone" Grid.Column="5"  Grid.ColumnSpan="2" Grid.Row="9" Placeholder="Phone"/>
+        <Entry x:Name="customerEmail" Grid.Column="7"  Grid.ColumnSpan="2" Grid.Row="9" Placeholder="Email"/>
+        <Button Grid.Column="9" Grid.ColumnSpan="2" Grid.Row="9" Text="Add" Clicked="onAddCustomerButtonClicked"/>
+
+        <!-- Rental -->
+        <Label Grid.Column="0"  Grid.ColumnSpan="10" Grid.Row="11" FontSize="Medium" FontAttributes="Bold" Text="Rentals"/>
+        <Picker x:Name="rentalPicker" Grid.Column="0" Grid.ColumnSpan="11" Grid.Row="12"/>
+        <Label Grid.Column="2" Grid.Row="13" Text="From:"/><DatePicker x:Name="rentalActualDatePicker" Grid.Column="3" Grid.ColumnSpan="3" Grid.Row="13"/>
+        <Label Grid.Column="6" Grid.Row="13" Text="To:"/><DatePicker x:Name="rentalReturnDatePicker" Grid.Column="7" Grid.ColumnSpan="3" Grid.Row="13"/>
+        <Button Grid.Column="2" Grid.ColumnSpan="3" Grid.Row="14" Text="Create Rental" BackgroundColor="LimeGreen" Clicked="onCreateRentalButtonClicked"/>
+        <Button Grid.Column="6" Grid.ColumnSpan="3" Grid.Row="14" Text="Reset Form" BackgroundColor="Red" Clicked="onResetButtonClicked"/>
+    </Grid>
+</ContentPage>
